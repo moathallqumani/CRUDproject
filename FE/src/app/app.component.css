@@ -1,0 +1,51 @@
+.main-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(26, 26, 26, 0.811);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content .table-holder {
+    background-color: aliceblue;
+    width: 30%;
+    height: 40%;
+    border: solid 0.5px black;
+    border-radius: 8%;
+    box-shadow: rgba(255, 255, 255, 0.24) 3px 3px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    overflow: scroll;
+}
+
+.main-content .table-holder .table-content button {
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.main-content .table-holder .table-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 70%;
+    transition: all ease-in-out 1.3s;
+}
+
+.main-content .table-holder .content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all ease-in-out 1.3s;
+}
+
+.main-content .table-holder .content button {
+    justify-content: center;
+    align-self: flex-end;
+    width: 100%;
+}

@@ -6,6 +6,7 @@ import com.example.crudproject.entity.Employee;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
+@Repository
 public interface employeeDAO  extends JpaRepository<Employee,String>{
-
+	
 }

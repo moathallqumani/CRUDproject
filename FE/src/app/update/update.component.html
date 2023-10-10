@@ -1,21 +1,28 @@
 <div class="update-content">
 
+    <div class="search-content">
+        <div class="form__group">
+            <input type="text" id="name" class="form__field" [(ngModel)]="searchInput" placeholder="Employee Name">
+            <label for="name" class="form__label">Employee Name</label>
 
+            <button class="btn btn-danger" style="margin-bottom: 10px;" (click)="search()">Search</button>
+        </div>
+    </div>
 
     <div class="form__group">
-        <input type="text" id="name" class="form__field" placeholder="Employee Name">
+        <input type="text" id="name" class="form__field" [(ngModel)]="empName" placeholder="Employee Name">
         <label for="name" class="form__label">Employee Name</label>
     </div>
     <div class="form__group">
-        <input type="number" id="salary" class="form__field" placeholder="Employee Salary">
+        <input type="number" id="salary" class="form__field" [(ngModel)]="empSalary" placeholder="Employee Salary">
         <label for="salary" class="form__label">Employee Salary</label>
     </div>
     <div class="form__group">
-        <input type="number" id="age" class="form__field" placeholder="Employee Age">
+        <input type="number" id="age" class="form__field" [(ngModel)]="empAge" placeholder="Employee Age">
         <label for="age" class="form__label">Employee Age</label>
     </div>
     <div class="form__group">
-        <input type="text" id="role" class="form__field" placeholder="Your Email">
+        <input type="text" id="role" class="form__field" [(ngModel)]="empRole" placeholder="Employee Role">
         <label for="role" class="form__label">Employee Role</label>
     </div>
 

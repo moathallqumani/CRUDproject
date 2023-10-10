@@ -14,7 +14,7 @@ export class UpdateComponent {
 
   constructor(private http: HttpClient) {
   }
-  employee = {};
+  employee= {};
   searchInput = '';
   empName = '';
   empSalary = '';
@@ -40,10 +40,12 @@ export class UpdateComponent {
     console.log(this.empName)
     this.http
     .get(this.baseURL+"/search?empName="+this.searchInput,{'headers':headers})
-    .subscribe((Response) =>{
-     this.employee = Response;
-     console.log(this.employee)
-
+    .subscribe((resp:any)=>{
+      this.empName = resp.entitiesResponse.employee_Name;
+      this.empSalary = resp.entitiesResponse.employee_Salary;
+      this.empAge = resp.entitiesResponse.employee_Age;
+     this.empRole = resp.entitiesResponse.employee_Role;
+     console.log(resp);
     })
 
 

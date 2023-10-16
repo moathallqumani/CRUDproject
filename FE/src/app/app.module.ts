@@ -9,8 +9,9 @@ import { UpdateComponent } from './update/update.component';
 import { DeleteComponent } from './delete/delete.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
+import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +25,13 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      toastClass: 'toast toast-bootstrap-compatibility-fix',
+      timeOut: 3000,
+    positionClass: 'toast-top-left',
+    preventDuplicates: true,
+    }),
     RouterModule.forRoot([
       { path: '', component: AppComponent },
       { path: 'create', component: InsertComponent },

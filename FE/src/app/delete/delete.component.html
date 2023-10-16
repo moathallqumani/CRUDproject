@@ -3,7 +3,7 @@
 
 
     <div class="form__group">
-        <input type="text" id="name" class="form__field" placeholder="Employee Name">
+        <input type="text" id="name" class="form__field" [(ngModel)]="empName" placeholder="Employee Name">
         <label for="name" class="form__label">Employee Name</label>
     </div>
 
@@ -11,4 +11,4 @@
 
 
 </div>
-<button class="btn btn-danger">Delete</button>
+<button class="btn btn-danger" (click)="delete()">Delete</button>

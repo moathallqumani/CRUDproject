@@ -36,31 +36,46 @@ public class controller {
 	
 			
 	@GetMapping(path = "/retriveemployees")
-	public Iterable< Employee> getEmployees() {
-	
-		return crudService.retriveEmployee();
+	public BaseResponse getEmployees() {
+		
+		BaseResponse res = new BaseResponse();
+		res.setMessage("SUCCESS");
+		res.setResponseCode("10");
+		res.setEntitiesResponse(crudService.retriveEmployee());
+		return res;
+		
 	}
 	
 	@PostMapping(path="/create")
-	public  String createNewEmployee(@RequestBody Employee employee) {
+	public  BaseResponse createNewEmployee(@RequestBody Employee employee) {
 		
 		crudService.createEmployee(employee);
-		
-		return "Employee Created.";
+		BaseResponse res = new BaseResponse();
+		res.setMessage("SUCCESS");
+		res.setResponseCode("10");
+		return res;
 	}
 	
 	@PostMapping(path="/update")
-	public  String updateEmployee(@RequestBody Employee employee) {
+	public  BaseResponse updateEmployee(@RequestBody Employee employee) {
 
 		crudService.updateEmployee( employee);
-		return "Employee Updated.";
+		
+		BaseResponse res = new BaseResponse();
+		res.setMessage("SUCCESS");
+		res.setResponseCode("10");
+		return res;
+	
 	}
 	
 	@PostMapping(path="/delete")
-	public  String deleteEmployee(@RequestBody Employee employee) {
+	public  BaseResponse deleteEmployee(@RequestBody Employee employee) {
 
 		crudService.deleteEmployee( employee);
-		return "Employee Deleted.";
+		BaseResponse res = new BaseResponse();
+		res.setMessage("SUCCESS");
+		res.setResponseCode("10");
+		return res;
 	}
 	
 	@GetMapping(path="/search")
